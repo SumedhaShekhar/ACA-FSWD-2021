@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Frontend Form</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="shortcut icon" href="#">
+	<script src="script.js"></script>
+</head>
+<body>
+	<section class="section">
+		<div class="container">
+			<div class="row ">
+				<div class="col text-center">
+					<h1 class="heading-section" text-align="centre">Form</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="wrap">
+						<div class="row no">
+							<div class="col align-items-search">
+								
+									
+								<div class="contact-wrap ">
+									<div class="content" id="menu" style="display: block;">
+										<h3 class="mb-4">Choose one the following:</h3>
+										<br>
+										<table width="85%" align="center" class="mb-4"><tr>
+										<td><button class="btn btn-primary" onclick="get_token()">Get Token</button>
+										<td><button class="btn btn-primary" onclick="register()">Register</button>
+										<td><button class="btn btn-primary" onclick="get_data()">Get Data</button>
+										</tr></table>
+									</div>
+									<div class="maincontent" id="response" style="display: none;">
+									</div>
+									<div class="maincontent" id="register" style="display: none;">
+										<h3 class="mb-4">Registration Form</h3>
+										<form id="formReg" name="regForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">User Name</label>
+														<input type="text" class="form-control" name="username" id="username" placeholder="User Name">
+													</div>
+												</div>
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="name">Token ID</label>
+														<input type="text" class="form-control" name="token" id="token" placeholder="Token from 'Get Token'">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="subject">Data</label>
+														<input type="text" class="form-control" name="data" id="data" placeholder="Data to Store">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="button" value="Send Data" class="btn btn-primary" onclick="submitdata(this.form)">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="maincontent" id="formData" style="display: none;">
+										<h3 class="mb-4">Form to Request Stored Data</h3>
+										<form method="POST" id="dataForm" name="dataForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="email">Token ID</label>
+														<input type="text" class="form-control" name="token" id="token" placeholder="Token ID">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="button" value="Fetch Data" class="btn btn-primary" onclick="GetSubdata(this.form)">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="dbox align-items-start">
+										<div class="text pl-3">
+										<p><span><b><a href='http://localhost:12345/' target="blank">Backend :</a></b></span> Show information about backend endpoints</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
